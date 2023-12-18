@@ -1,0 +1,25 @@
+// Import External Scss Files
+@import "mixins";
+@import "homepage";
+@import "projects";
+@import "profile";
+
+//Global Rules 
+* {
+	box-sizing: border-box !important;
+	margin: 0px;
+	padding: 0px;
+}
+
+*:focus {
+	outline: none;	
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: var(--dark);
+}

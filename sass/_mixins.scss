@@ -1,0 +1,29 @@
+// Flex Box Mixin
+@mixin fb($dir, $hor, $ver, $gap) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: $hor;
+	align-items: $ver;
+	gap: $gap;
+}
+
+// Grid Template Columns Mixin
+@mixin gtc($min-width, $gap) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+	gap: $gap;
+}
+
+// Center An Element With Absolute Position
+@mixin center-pos {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Container
+@mixin container {
+	margin: auto;
+	padding: 0px 32px;
+}
