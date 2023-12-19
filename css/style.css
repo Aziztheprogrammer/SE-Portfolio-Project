@@ -80,7 +80,7 @@ section.hero {
   background-color: #161616;
   color: #f2f2f2;
   width: 100%;
-  padding: 48px 0px;
+  padding-top: 48px;
   min-height: calc(100vh - 56px); }
   @media (max-width: 569px) {
     section.hero {
@@ -180,7 +180,7 @@ section.stats {
   section.stats > .container {
     margin: auto;
     padding: 0px 32px;
-    padding: 32px 64px;
+    padding: 64px 64px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto, 180px));
     gap: 48px;
@@ -202,6 +202,69 @@ section.stats {
         font-size: 2.9rem;
         font-weight: 600;
         display: block; }
+
+section.tetimonials {
+  color: #f2f2f2;
+  background-color: #323232; }
+  @media (max-width: 996px) {
+    section.tetimonials {
+      font-size: 12px; } }
+  section.tetimonials > .container {
+    margin: auto;
+    padding: 0px 32px;
+    padding: 64px 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 64px; }
+    @media (max-width: 996px) {
+      section.tetimonials > .container {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-pack: fle-start;
+            -ms-flex-pack: fle-start;
+                justify-content: fle-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 32px; } }
+    section.tetimonials > .container > .text {
+      max-width: 700px; }
+      @media (max-width: 996px) {
+        section.tetimonials > .container > .text {
+          text-align: center; } }
+      section.tetimonials > .container > .text > span:first-child {
+        color: darkgray;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.44em; }
+      section.tetimonials > .container > .text > p {
+        font-weight: 500;
+        font-size: 2.078em;
+        line-height: 1.2;
+        margin: 16px 0px;
+        text-transform: capitalize; }
+    section.tetimonials > .container > img {
+      border-radius: 50%;
+      max-width: 200px;
+      aspect-ratio: 1/1; }
 
 * {
   -webkit-box-sizing: border-box !important;

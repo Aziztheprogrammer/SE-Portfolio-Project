@@ -1,6 +1,7 @@
 @import "mixins";
 
 $main-color: #161616; // This Is Main Color
+$second-color: #323232; // This Is Second Color
 $white: #f2f2f2;
 
 // Start The Header
@@ -61,7 +62,7 @@ section.hero {
 	background-color: $main-color;
 	color: $white;
 	width: 100%;
-	padding: 48px 0px;
+	padding-top: 48px;
 	min-height: calc(100vh - 56px);
 
 	@media (max-width: 569px) {
@@ -148,7 +149,7 @@ section.stats {
 
 	> .container {
 		@include container;
-		padding: 32px 64px;
+		padding: 64px 64px;
 		@include gtc(180px, 48px);
 		justify-content: space-between;
 
@@ -175,5 +176,52 @@ section.stats {
 // End The Stats Section
 
 // Start The Testimonials
+section.tetimonials {
+	color: $white;
+	background-color: $second-color;
 
+	@media (max-width: 996px) {
+		font-size: 12px;
+	}
+
+	> .container {
+		@include container;
+		padding: 64px 32px;
+		@include fb(row, space-between, center, 64px);
+
+		@media (max-width: 996px) {
+			flex-wrap: wrap;
+			@include fb(column-reverse, fle-start, center, 32px)
+		}
+
+		> .text {
+			max-width: 700px;
+
+			@media (max-width: 996px) {
+				text-align: center;
+			}
+
+			> span:first-child {
+				color: darkgray;
+				font-weight: 300;
+				font-style: italic;
+				font-size: 1.44em;
+			}
+
+			> p {
+				font-weight: 500;
+				font-size: 2.078em;
+				line-height: 1.2;
+				margin: 16px 0px;
+				text-transform: capitalize;
+			}
+		}
+
+		> img {
+			border-radius: 50%;
+			max-width: 200px;
+			aspect-ratio: 1/1;
+		}
+	}
+}
 // End The Testimonials
