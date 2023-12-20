@@ -333,8 +333,8 @@ section.my-work {
 		> .projects {
 			margin: 24px 0px;
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-			grid-gap: 32px;
+			grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+			grid-gap: 48px;
 
 			> div {
 				height: 300px;
@@ -374,3 +374,62 @@ section.my-work {
 
 }
 // End My Work Section
+
+// Start The Footer
+footer {
+	background-color: $second-color;
+	color: $white;
+	padding: 48px 0px;
+
+	@media (max-width: 992px) {
+		font-size: 14px;
+	}
+
+	> .container {
+		@include container;
+		@include fb(row, space-between, center, 32px);
+
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+
+		> div {
+			@media (max-width: 992px) {
+				width: 100%;
+			}
+		}
+
+		> .slogan > h1 {
+			font-size: 1.44rem;
+			padding: 8px 0px;
+			border-bottom: 1px $white solid;
+		}
+
+		> .slogan p {
+			padding: 8px 0px;
+			font-weight: 300;
+		}
+
+		> .our-community {
+			background-color: #101010;
+			border-radius: 8px;
+			padding: 24px;
+
+			input {
+				max-width: 300px;
+				margin-top: 24px;
+				background-color: transparent;
+				border-radius: #f4f4f4 1px solid;
+				padding: 8px 4px;
+				border-radius: 4px;
+			}
+
+			button {
+				background-color: #000000;
+				padding: 8px 16px;
+				border-radius: 8px;
+			}
+		}
+	}
+}
+// End The Footer
