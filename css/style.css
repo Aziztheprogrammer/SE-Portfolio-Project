@@ -250,7 +250,7 @@ section.tetimonials {
       @media (max-width: 996px) {
         section.tetimonials > .container > .text {
           text-align: center; } }
-      section.tetimonials > .container > .text > span:first-child {
+      section.tetimonials > .container > .text > .title {
         color: darkgray;
         font-weight: 300;
         font-style: italic;
@@ -265,6 +265,84 @@ section.tetimonials {
       border-radius: 50%;
       max-width: 200px;
       aspect-ratio: 1/1; }
+
+section.services {
+  background-color: #161616;
+  color: #f2f2f2; }
+  @media (max-width: 996px) {
+    section.services {
+      font-size: 12px; } }
+  section.services > .container {
+    margin: auto;
+    padding: 0px 32px;
+    padding: 64px 32px; }
+    section.services > .container > .services {
+      padding: 16px 0px 48px 0px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      gap: 48px;
+      margin-top: 16px;
+      width: 100%;
+      font-size: 1.78em;
+      font-weight: 300;
+      position: relative; }
+      @media (max-width: 769px) {
+        section.services > .container > .services {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
+      section.services > .container > .services:after {
+        content: "";
+        opacity: 0.4;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-color: #f2f2f2; }
+      section.services > .container > .services > div {
+        width: calc((100% - 48px * 2) / 3);
+        padding: 8px 0px;
+        position: relative;
+        -webkit-transition: 0.7s ease-in-out padding;
+        transition: 0.7s ease-in-out padding; }
+        @media (max-width: 769px) {
+          section.services > .container > .services > div {
+            width: 100%; } }
+        section.services > .container > .services > div > i {
+          margin-right: 8px; }
+        section.services > .container > .services > div:after {
+          font-family: "Font Awesome 6 Free";
+          content: "\f061";
+          font-weight: 900;
+          font-size: 12px;
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          -webkit-transition: 0.7s ease-in-out transform;
+          transition: 0.7s ease-in-out transform; }
+        section.services > .container > .services > div:hover {
+          padding: 8px 16px; }
+        section.services > .container > .services > div:hover:after {
+          -webkit-transform: translate(-16px, -50%);
+                  transform: translate(-16px, -50%); }
+    section.services > .container > span {
+      color: darkgray;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.44em; }
 
 * {
   -webkit-box-sizing: border-box !important;

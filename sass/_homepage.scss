@@ -201,7 +201,7 @@ section.tetimonials {
 				text-align: center;
 			}
 
-			> span:first-child {
+			> .title {
 				color: darkgray;
 				font-weight: 300;
 				font-style: italic;
@@ -225,3 +225,86 @@ section.tetimonials {
 	}
 }
 // End The Testimonials
+
+// Start The Services Section
+section.services {
+	background-color: $main-color;
+	color: $white;
+
+	@media (max-width: 996px) {
+		font-size: 12px;
+	}
+
+	> .container {
+		@include container;
+		padding: 64px 32px;
+
+		> .services {
+			 padding: 16px 0px 48px 0px;
+			 @include fb(row, flex-start, stretch, 48px);
+			 margin-top: 16px;
+			 width: 100%;
+			 font-size: 1.78em;
+			 font-weight: 300;
+			 position: relative;
+
+			 @media (max-width: 769px) {
+			 	flex-wrap: wrap;
+			 }
+
+			&:after {
+				content: "";
+				opacity: 0.4;
+				height: 1px;
+				width: 100%;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				background-color: $white;
+			}
+
+			 > div {
+			 	width: calc((100% - 48px * 2) / 3);
+			 	padding: 8px 0px;
+			 	position: relative;
+			 	transition: 0.7s ease-in-out padding;
+
+			 	@media (max-width: 769px) {
+			 		width: 100%;
+			 	}
+
+			 	> i {
+			 		margin-right: 8px;
+			 	}
+
+			 	&:after {
+			 		font-family: "Font Awesome 6 Free";
+			 		content: "\f061";
+				    font-weight: 900;
+				    font-size: 12px;
+				    position: absolute;
+				    right: 20px;
+				    top: 50%;
+				    transform: translateY(-50%);
+				    transition: 0.7s ease-in-out transform;
+			 	}
+
+			 	&:hover {
+			 		padding: 8px 16px;
+			 	}
+
+			 	&:hover:after {
+			 		transform: translate(-16px, -50%);
+			 	}
+			 }
+		}
+
+		> span {
+			color: darkgray;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 1.44em;
+		}
+	}
+}
+// End The Services Section
