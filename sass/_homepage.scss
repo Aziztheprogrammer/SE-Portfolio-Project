@@ -308,3 +308,69 @@ section.services {
 	}
 }
 // End The Services Section
+
+// Start My Work Section
+section.my-work {
+	background-color: $main-color;
+	color: $white;
+
+	@media (max-width: 996px) {
+		font-size: 12px;
+	}
+
+	> .container {
+		@include container;
+		padding: 64px 32px;
+		@include fb(column, flex-start, stretch, 0px);
+
+		> span {
+			color: darkgray;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 1.44em;
+		}
+
+		> .projects {
+			margin: 24px 0px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+			grid-gap: 32px;
+
+			> div {
+				height: 300px;
+				background-color: $white;
+				border-radius: 16px;
+				opacity: 0.8;
+				cursor: pointer;
+				position: relative;
+				z-index: 1;
+				transition: 0.7s ease-in-out opacity;
+
+				&:hover {
+					opacity: 0.3;
+				}
+
+			}
+
+			@for $i from 1 through 4 {
+				> div:nth-child(#{$i}) {
+					background: url("../images/Home-Page/project-#{$i}.webp") no-repeat 
+					center center;
+					background-size: cover;
+				}
+			}
+		}
+
+		> a {
+			font-size: 1rem;
+			align-self: center;
+
+			> i {
+				margin-top: 16px;
+				margin-left: 8px;
+			}
+		}
+	}
+
+}
+// End My Work Section

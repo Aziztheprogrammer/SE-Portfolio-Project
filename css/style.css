@@ -344,6 +344,72 @@ section.services {
       font-style: italic;
       font-size: 1.44em; }
 
+section.my-work {
+  background-color: #161616;
+  color: #f2f2f2; }
+  @media (max-width: 996px) {
+    section.my-work {
+      font-size: 12px; } }
+  section.my-work > .container {
+    margin: auto;
+    padding: 0px 32px;
+    padding: 64px 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 0px; }
+    section.my-work > .container > span {
+      color: darkgray;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.44em; }
+    section.my-work > .container > .projects {
+      margin: 24px 0px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+      grid-gap: 32px; }
+      section.my-work > .container > .projects > div {
+        height: 300px;
+        background-color: #f2f2f2;
+        border-radius: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        -webkit-transition: 0.7s ease-in-out opacity;
+        transition: 0.7s ease-in-out opacity; }
+        section.my-work > .container > .projects > div:hover {
+          opacity: 0.3; }
+      section.my-work > .container > .projects > div:nth-child(1) {
+        background: url("../images/Home-Page/project-1.webp") no-repeat center center;
+        background-size: cover; }
+      section.my-work > .container > .projects > div:nth-child(2) {
+        background: url("../images/Home-Page/project-2.webp") no-repeat center center;
+        background-size: cover; }
+      section.my-work > .container > .projects > div:nth-child(3) {
+        background: url("../images/Home-Page/project-3.webp") no-repeat center center;
+        background-size: cover; }
+      section.my-work > .container > .projects > div:nth-child(4) {
+        background: url("../images/Home-Page/project-4.webp") no-repeat center center;
+        background-size: cover; }
+    section.my-work > .container > a {
+      font-size: 1rem;
+      -ms-flex-item-align: center;
+          align-self: center; }
+      section.my-work > .container > a > i {
+        margin-top: 16px;
+        margin-left: 8px; }
+
 * {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
