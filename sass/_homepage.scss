@@ -267,6 +267,7 @@ section.services {
 			 	width: calc((100% - 48px * 2) / 3);
 			 	padding: 8px 0px;
 			 	position: relative;
+			 	cursor: pointer;
 			 	transition: 0.7s ease-in-out padding;
 
 			 	@media (max-width: 769px) {
@@ -333,11 +334,15 @@ section.my-work {
 		> .projects {
 			margin: 24px 0px;
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 			grid-gap: 48px;
+			grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+
+			@media (max-width: 992px) {
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			}
 
 			> div {
-				height: 300px;
+				aspect-ratio: 16/9;
 				background-color: $white;
 				border-radius: 16px;
 				opacity: 0.8;
@@ -416,7 +421,7 @@ footer {
 			padding: 24px;
 
 			input {
-				max-width: 300px;
+				width: auto;
 				margin-top: 24px;
 				background-color: transparent;
 				border-radius: #f4f4f4 1px solid;
@@ -428,6 +433,11 @@ footer {
 				background-color: #000000;
 				padding: 8px 16px;
 				border-radius: 8px;
+
+				@media (max-width: 769px) {
+					margin-top: 16px;
+					width: 100%;
+				}
 			}
 		}
 	}
