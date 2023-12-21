@@ -1,0 +1,89 @@
+@import "mixins";
+
+$main-color: #161616; // This Is Main Color
+$second-color: #323232; // This Is Second Color
+$white: #f2f2f2;
+
+// Start The Header
+header.projects-header {
+	background-color: $second-color;
+}
+// End The Header
+
+// Start Main Page
+main {
+	background-color: $main-color;
+	color: $white;
+	height: auto;
+	padding: 64px 0px;
+	@media (max-width: 769px) {
+		font-size: 12px;
+	}
+
+	> .container {
+		@include container;
+
+		> .title {
+			width: 100%;
+			font-size: 2.98em;
+			font-weight: 600;
+			padding: 16px 0px;
+			position: relative;
+
+			&:after {
+				content: "";
+				opacity: 0.4;
+				height: 1px;
+				width: 100%;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				background-color: $white;
+			}
+		}
+
+		> .filter {
+			width: 100%;
+			padding: 32px 0px;
+			@include fb(row, flex-start, center, 16px);
+
+			@media (max-width: 560px) {
+				flex-wrap: wrap;
+			}
+
+			> span {
+				font-weight: 300;
+				font-size: 1.2rem;
+			}
+
+			> div {
+
+				> input {
+					background-color: transparent;
+					color: $second-color;
+					border-radius: 8px;
+					padding: 4px 8px;
+					border: 1px $second-color solid;
+					font-weight: 300;
+					font-size: 0.8rem;
+				}
+			}
+
+			> select {
+				background-color: transparent;
+				color: $white;
+				border-radius: 8px;
+				padding: 4px 8px;
+				border: 1px $second-color solid;
+				font-weight: 300;
+				font-size: 0.8rem;
+
+				> option {
+					background-color: $main-color;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+// End Main Page
