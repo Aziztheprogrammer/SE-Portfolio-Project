@@ -1,0 +1,93 @@
+@import "mixins";
+
+$main-color: #161616; // This Is Main Color
+$second-color: #323232; // This Is Second Color
+$white: #f2f2f2;
+
+// Start The Profile Page
+section.profile {
+	background-color: $main-color;
+	color: $white;
+	padding: 64px 0px;
+	position: relative;
+	z-index: 1;
+
+	> .profile-banner {
+		width: 100%;
+		height: 30vh;
+		background: url("../images/Profile-Page/profile-banner.webp") no-repeat center center;
+		background-size: cover;
+		opacity: 0.8;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: -1;
+	}
+
+	> .container {
+		@include container;
+
+		> .profile-card {
+			background-color: $second-color;
+			border-radius: 8px;
+			padding: 32px;
+			max-width: 250px;
+			@include fb(column, flex-start, center, 32px);
+
+			> .info {
+				@include fb(column, flex-start, center, 8px);
+				width: 100%;
+
+				> img {
+					border-radius: 50%;
+					aspect-ratio: 1 / 1;
+					object-fit: cover;
+					max-width: 100px;
+					margin-bottom: 8px;
+				}
+
+				> span {
+					font-weight: 500;
+				}
+
+				> p {
+					font-weight: 300;
+					font-size: 0.8rem;
+					color: #eee;
+				}
+
+				> button {
+					width: 100%;
+					background-color: #000;
+					padding: 8px 16px;
+					border-radius: 8px;
+					margin-top: 8px;
+				}
+			}
+
+			> .stats {
+				width: 100%;
+				@include fb(column, flex-start, stretch, 8px);
+				font-weight: 500;
+
+				> div {
+					@include fb(row, space-between, center, 8px);
+				}
+			}
+
+			> .about-me {
+				font-weight: 300;
+				font-size: 0.8rem;
+
+				> span {
+					font-weight: 500;
+					display: block;
+					margin-bottom: 8px;
+				}
+			}
+		} 
+	} 
+}
+
+
+// End The Profile Page

@@ -582,6 +582,119 @@ main {
           padding: 4px 8px;
           border-radius: 4px; }
 
+section.profile {
+  background-color: #161616;
+  color: #f2f2f2;
+  padding: 64px 0px;
+  position: relative;
+  z-index: 1; }
+  section.profile > .profile-banner {
+    width: 100%;
+    height: 30vh;
+    background: url("../images/Profile-Page/profile-banner.webp") no-repeat center center;
+    background-size: cover;
+    opacity: 0.8;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1; }
+  section.profile > .container {
+    margin: auto;
+    padding: 0px 32px; }
+    section.profile > .container > .profile-card {
+      background-color: #323232;
+      border-radius: 8px;
+      padding: 32px;
+      max-width: 250px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 32px; }
+      section.profile > .container > .profile-card > .info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 8px;
+        width: 100%; }
+        section.profile > .container > .profile-card > .info > img {
+          border-radius: 50%;
+          aspect-ratio: 1 / 1;
+          -o-object-fit: cover;
+             object-fit: cover;
+          max-width: 100px;
+          margin-bottom: 8px; }
+        section.profile > .container > .profile-card > .info > span {
+          font-weight: 500; }
+        section.profile > .container > .profile-card > .info > p {
+          font-weight: 300;
+          font-size: 0.8rem;
+          color: #eee; }
+        section.profile > .container > .profile-card > .info > button {
+          width: 100%;
+          background-color: #000;
+          padding: 8px 16px;
+          border-radius: 8px;
+          margin-top: 8px; }
+      section.profile > .container > .profile-card > .stats {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        gap: 8px;
+        font-weight: 500; }
+        section.profile > .container > .profile-card > .stats > div {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          gap: 8px; }
+      section.profile > .container > .profile-card > .about-me {
+        font-weight: 300;
+        font-size: 0.8rem; }
+        section.profile > .container > .profile-card > .about-me > span {
+          font-weight: 500;
+          display: block;
+          margin-bottom: 8px; }
+
 * {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
