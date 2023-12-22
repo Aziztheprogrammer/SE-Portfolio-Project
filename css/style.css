@@ -544,6 +544,43 @@ main {
         main > .container > .filter > select > option {
           background-color: #161616;
           color: #f2f2f2; }
+    main > .container > .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 24px;
+      padding: 32px 0px; }
+      main > .container > .projects > div {
+        background-color: #323232;
+        padding: 16px;
+        border-radius: 8px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        gap: 16px; }
+        main > .container > .projects > div > img {
+          max-width: calc(100% + 32px) !important;
+          translate: -16px;
+          aspect-ratio: 4/3;
+          border-radius: 8px; }
+        main > .container > .projects > div > h1 {
+          font-weight: 600;
+          font-size: 1.2rem; }
+        main > .container > .projects > div > p {
+          font-size: 0.75rem; }
+        main > .container > .projects > div > a {
+          background-color: #000000;
+          padding: 4px 8px;
+          border-radius: 4px; }
 
 * {
   -webkit-box-sizing: border-box !important;
