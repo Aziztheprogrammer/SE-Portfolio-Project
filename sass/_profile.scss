@@ -8,7 +8,7 @@ $white: #f2f2f2;
 section.profile {
 	background-color: $main-color;
 	color: $white;
-	padding: 64px 0px;
+	padding: 64px 0px 136px 0px;
 	position: relative;
 	z-index: 1;
 
@@ -26,6 +26,12 @@ section.profile {
 
 	> .container {
 		@include container;
+		@include fb(row, flex-start, stretch, 16px);
+
+		@media (max-width: 1024px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 
 		> .profile-card {
 			background-color: $second-color;
@@ -33,6 +39,10 @@ section.profile {
 			padding: 32px;
 			max-width: 250px;
 			@include fb(column, flex-start, center, 32px);
+
+			@media (max-width: 1024px) {
+				width: max(60%, 100%);
+			}
 
 			> .info {
 				@include fb(column, flex-start, center, 8px);
@@ -86,6 +96,70 @@ section.profile {
 				}
 			}
 		} 
+
+		> .profile-links {
+			padding: 24px;
+			translate: 0px 20vh;
+
+			@media (max-width: 1024px) {
+				width: max(60%, 100%);
+				translate: 0px 0px;
+			}
+
+			> .links {
+				padding: 16px 0px;
+				position: relative;
+
+				@media (max-width: 1024px) {
+					display: none;
+				}
+
+				&:after {
+					content: "";
+					opacity: 0.4;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+					bottom: 0px;
+					left: 0px;
+					background-color: $white;
+				}
+
+				> ul {
+
+					> li {
+						display: inline-block;
+						margin-right: 32px;
+						font-weight: 300;
+						cursor: pointer;
+						transition: 0.4s ease-in-out color;
+						font-size: clamp(0.8rem, 1rem);
+
+						&:hover {
+							color: #fff;
+						}
+					}
+
+					> .clicked {
+						font-weight: 500;
+						color: #fff;
+					}
+				}
+			}
+
+			> .content {
+				padding: 16px 0px;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				grid-gap: 16px;
+
+				> img {
+					border-radius: 8px;
+					aspect-ratio: 16 / 9;
+					object-fit: cover;
+				}
+			}
+		}
 	} 
 }
 
